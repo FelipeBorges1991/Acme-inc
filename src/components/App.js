@@ -5,9 +5,9 @@ function App() {
   return (
     <div
       style={{
-        backgroundColor: "#F0E3CA",
+        backgroundColor: "#193C40",
         fontFamily: "monospace",
-        color: "#1B1A17",
+        color: "#F2EDE9",
         minHeight: "900px",
       }}
     >

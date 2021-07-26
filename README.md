@@ -14,29 +14,30 @@
 
 ## Diário
 
-O objetivo dessa sessão é explicitar a minha linha de raciocínio, coisas que eu tentei, conforme o andamento do projeto.
+O objetivo dessa sessão é explicitar a minha linha de raciocínio, coisas que eu executei ou tentei executar, conforme o andamento do projeto.
 
 ### 26/07/2021 (1º dia)
 
 - [x] Leitura da documentação do teste
 - [x] Criação da aplicação com create react app
 - [x] Instalação das dependencias (Axios, ReactRouterDom e Bootstrap)
+- [x] Escolher paleta de cores e fonte (Fonte = Ubunto; Cores = fundo(#193C40); elementos(#F28705); textos(#F2EDE9))
 - [ ] Criação dos componentes das páginas e rotas
 - [ ] Executar componente da página inicial (Home) e renderizar página com título e botão com link para a rota de lista de produtos.
 - [ ] Atualizar componente App.js com a rota da página inicial.
 
 ### 27/07/2021 (2º dia)
 
-- [ ]
+- []
 
 ### 28/07/2021 (3º dia)
 
-- [ ]
+- []
 
 ### 29/07/2021 (4º dia)
 
-- [ ]
+- []
 
 ### 30/07/2021 (5º dia)
 
-- [ ]
+- []
