@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import api from "../apis/index";
 import { verbs, adjectives, criarUnico } from "../apis/globalVariables";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 // import Footer from "../components/Footer";
 
 function ProductsList() {
@@ -24,8 +26,9 @@ function ProductsList() {
   }, []);
 
   return (
-    <div className="container-fluid">
-      <h1 className="text-center mb-2 p-4 pb-2">Lista de produtos</h1>
+    <div className="container-fluid p-0 text-center">
+      <Navbar />
+      <h1 className="text-center mb-2 p-4 pb-2">Produtos Acme</h1>
       <hr></hr>
       <div className="row d-flex m-0 align-items-center">
         {products.map((list) => {
@@ -63,6 +66,7 @@ function ProductsList() {
           );
         })}
       </div>
+      <Footer />
     </div>
   );
 }
