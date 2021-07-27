@@ -1,7 +1,18 @@
 .App {
+  background: repeat;
   background-color: #193c40;
   font-family: Montserrat, sans-serif;
   color: #f2ede9;
-  height: 100vh;
-  width: 100vw;
+}
+
+.bloco {
+  overflow: hidden;
+}
+.bloco img {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+.bloco img:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }

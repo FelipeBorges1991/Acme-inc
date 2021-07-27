@@ -4,14 +4,14 @@ function Home() {
   return (
     <div className="d-flex flex-column vh-100 justify-content-center align-items-center">
       <h1
-        className="mb-3"
+        className="mb-1"
         style={{
           fontWeight: "bolder",
         }}
       >
         Acme inc.
       </h1>
-      <h3 className="text-center">Encontre aqui os melhores produtos do mercado</h3>
+      <h3 className="text-center mb-4">Encontre aqui os melhores produtos do mercado!!</h3>
 
       <div
         className="btn-group btn-group-lg container d-flex justify-content-center"
