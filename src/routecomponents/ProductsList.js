@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import api from "../apis/index";
+import { verbs, adjectives, criarUnico } from "../apis/globalVariables";
 // import Footer from "../components/Footer";
 
 function ProductsList() {
@@ -49,7 +50,12 @@ function ProductsList() {
                   style={{ backgroundColor: "#F28705" }}
                 >
                   <p className="card-text text-center">
-                    <strong>Nome do produto</strong>
+                    <strong>
+                      {verbs[Math.floor(Math.random() * 50)]}&nbsp;
+                    </strong>
+                    <strong>
+                      {adjectives[Math.floor(Math.random() * 50)]}
+                    </strong>
                   </p>
                 </div>
               </div>
@@ -57,22 +63,6 @@ function ProductsList() {
           );
         })}
       </div>
-
-      {/* <div className="row d-flex justify-content-center">
-        {products.map((x) => {
-          return (
-            <Link>
-              <img
-                className="card-img-top m-3 mb-5"
-                key={x.id}
-                src={x.download_url}
-                alt="Imagem do produto"
-                style={{ height: "16rem", width: "16rem" }}
-              ></img>
-            </Link>
-          );
-        })}
-      </div> */}
     </div>
   );
 }
