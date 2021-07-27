@@ -17,7 +17,13 @@ function Navbar() {
         ></img>
       </a>
       <a className="navbar-brand" href="/">
-        <img src={cart} width="30" height="auto" alt="Cart icon"></img>
+        <img
+          src={cart}
+          width="30"
+          height="auto"
+          alt="Cart icon"
+          style={{ marginRight: "15px" }}
+        ></img>
       </a>
     </nav>
   );

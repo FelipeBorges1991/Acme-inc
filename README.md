@@ -32,8 +32,10 @@ Tive dificuldade em renderizar apenas fotos aleatórias da API, não consegui fa
 ### 27/07/2021 (2º dia)
 
 - [x] Acrescentar os nomes de cada produto, utilizando as variáveis solicitadas no teste.
-- [] Iniciar confecção do componente de rota ProductDetail
 - [x] Executar componentes Navbar e Footer
+- [x] Iniciar confecção do componente de rota ProductDetail
+- [] Incluir nome do produto na rota Product Detail
+- [] Incluir descrição do produto, de acordo com o que foi solicitado no teste.
 
 ### 28/07/2021 (3º dia)
 

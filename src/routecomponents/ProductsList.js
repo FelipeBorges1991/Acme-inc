@@ -38,9 +38,12 @@ function ProductsList() {
                 className="card m-2 border border-none"
                 style={{ width: "18rem", backgroundColor: "#193c40" }}
               >
-                <Link className="bloco">
+                <Link
+                  className="bloco"
+                  key={list.id}
+                  to={`/productdetail/${list.id}`}
+                >
                   <img
-                    key={list.id}
                     src={list.download_url}
                     className="card-img-top"
                     style={{ height: "18rem" }}

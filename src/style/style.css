@@ -1,8 +1,8 @@
 .App {
-  background: repeat;
   background-color: #193c40;
   font-family: Montserrat, sans-serif;
   color: #f2ede9;
+  min-height: 100vh;
 }
 
 .bloco {
