@@ -32,6 +32,39 @@ function ProductDetail() {
       <Navbar />
       <div className="container d-flex flex-column justify-content-center align-items-center">
         <img
+          className="w-50 h-50 mt-2 mb-2 img-thumbnail"
+          style={{ backgroundColor: "#F28705", border: "none" }}
+          key={product.id}
+          src={product.download_url}
+          alt="Product"
+        ></img>
+        <div
+          className="card mb-3 text-center border-primary"
+          style={{ backgroundColor: "#F28705" }}
+        >
+          <div className="card-body">
+            <blockquote className="card-blockquote">
+              <h3>Descrição:</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+                cumque delectus deleniti dolor esse ex fugiat, id in ipsum modi
+                molestiae mollitia, nulla numquam provident quasi soluta sunt
+                tempora vel. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Accusamus, aspernatur consequuntur cumque dolor ducimus
+                earum eos, expedita, fuga harum incidunt maxime modi mollitia
+                numquam praesentium sapiente suscipit temporibus ut vero. Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Amet nam
+                nostrum pariatur praesentium tempore. Ad architecto at aut dicta
+                enim, eveniet expedita libero magnam minus, nihil, non sequi
+                sunt voluptates!
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="container d-flex flex-column justify-content-center align-items-center">
+        <img
           className="w-50 h-50 mt-2 img-thumbnail"
           style={{ backgroundColor: "#F28705", border: "none" }}
           key={product.id}
@@ -53,9 +86,10 @@ function ProductDetail() {
               csdvdsvsdv dscds cas casc
             </p>
           </div>
-        </div>
-        <Footer />
-      </div>
+        </div> */}
+
+      {/* </div> */}
+      <Footer />
     </div>
   );
 }

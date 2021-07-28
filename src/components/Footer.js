@@ -2,7 +2,7 @@ function Footer() {
   return (
     <footer
       className=" mt-5 navbar navbar-static-bottom justify-content-center"
-      style={{ backgroundColor: "#193c40" }}
+      style={{ backgroundColor: "#193C40" }}
     >
       <div>
         <p className="text-center text-white-50" style={{ fontSize: "12px" }}>
