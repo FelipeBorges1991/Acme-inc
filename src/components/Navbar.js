@@ -16,7 +16,7 @@ function Navbar() {
           style={{ marginLeft: "20px" }}
         ></img>
       </a>
-      <a className="navbar-brand" href="/">
+      <a className="navbar-brand" href="/cartlist">
         <img
           src={cart}
           width="30"

@@ -17,18 +17,12 @@
     "exigente", "nostálgico", "próspero", "compreensivo", "excelente", "estourado", "malvado",
     "windsurfista", "verdadeiro", "melhor", "terno"]; 
 
-    function criarUnico() {
-        let random = []
-        let sugestao = Math.ceil(Math.random() * 50); // Escolher um numero ao acaso
-        while (verbs.indexOf(sugestao) >= 0) {  // Enquanto o numero já existir, escolher outro
-            sugestao = Math.floor(Math.random() * 50);
-        }
-        random.push(verbs); // adicionar este numero à array de numeros sorteados para futura referência
-        console.log(random)
-        return random; // devolver o numero único
-        
-    }
 
+    const randomVerbs = verbs[Math.floor(Math.random() * 50)]
+    const randomAdjectives = adjectives[Math.floor(Math.random() * 50)]
 
+    const productName = randomVerbs + " " + randomAdjectives
+    
 
-export { verbs, adjectives, criarUnico };
+    
+export { productName };
