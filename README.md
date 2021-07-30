@@ -35,16 +35,15 @@ Tive dificuldade em renderizar apenas fotos aleatórias da API, não consegui fa
 - [x] Executar componentes Navbar e Footer
 - [x] Iniciar confecção do componente de rota ProductDetail
 - [] Incluir nome do produto na rota Product Detail
-- [] Incluir descrição do produto, de acordo com o que foi solicitado no teste.
+- [x] Incluir descrição do produto, de acordo com o que foi solicitado no teste.
 
-### 28/07/2021 (3º dia)
+### 28/07/2021 (3º dia) / 29/07/2021 (4º dia) / 30/07/2021 (5º dia)
 
-- []
+Durante esses dias ocorreram imprevistos, problemas pessoais e de saúde. Por isso não consegui implementar as funções necessárias e nem aplicar os códigos que eu queria. Seguem abaixo algumas coisas que consegui realizar, quando arrumava tempo.
 
-### 29/07/2021 (4º dia)
+- Lógica do carrinho de compras com useContext, porém sem o botão com funão de adicionar.
+- Rota para a lista do carrinho (porén vazia)
 
-- []
+### Considerações finais
 
-### 30/07/2021 (5º dia)
-
-- []
+O projeto está incompleto. Creio que se não houvesse os imprevistos, poderia entregar o que eu desejava. Continuarei aperfeçoando o mesmo para que o resultado final fique de acordo com as solicitações do teste.

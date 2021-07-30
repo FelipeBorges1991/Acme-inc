@@ -1,6 +1,4 @@
-import harry from "../images/Harry.jpg";
-
-function Carousel() {
+function Carousel(props) {
   return (
     <div
       id="carouselExampleControls"
@@ -12,22 +10,9 @@ function Carousel() {
           <img
             className="d-block img-fluid"
             style={{ opacity: "0.4" }}
-            src={harry}
+            key={props.img.download_url}
+            src={props.img.download_url}
             alt="First slide"
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            className="d-block img-fluid"
-            src="/bootstrap-themes/demo/images/slider2.png"
-            alt="Second slide"
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            className="d-block img-fluid"
-            src="/bootstrap-themes/demo/images/slider3.png"
-            alt="Third slide"
           />
         </div>
       </div>

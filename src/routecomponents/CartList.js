@@ -4,24 +4,21 @@ import Navbar from "../components/Navbar";
 function CartList() {
   return (
     <div>
-    <Navbar/>
+      <Navbar />
       <div className="d-flex flex-column vh-100 justify-content-center align-items-center">
-      <h1>Carrinho de compras:</h1>
+        <h1>Carrinho de compras:</h1>
         <ul className="list-group">
-          <li className="list-group-item">Cras justo odiodasfasfasfasfgasfasfasfa faasfasfsdfsd fasfas</li>
-          <li className="list-group-item">Dapibus ac facilisis in</li>
-          <li className="list-group-item">Porta ac consectetur ac</li>
+          <li className="list-group-item">ITEMS</li>
+          <li className="list-group-item"></li>
+          <li className="list-group-item"></li>
           <li className="list-group-item justify-content-between">
-            Cras justo odio
-            <span className="badge badge-default badge-pill">14</span>
+            <span className="badge badge-default badge-pill"></span>
           </li>
-          <li className="list-group-item">Vestibulum at eros</li>
-          <li className="list-group-item">
-            Dapibus ac facilisis in
-          </li>
+          <li className="list-group-item"></li>
+          <li className="list-group-item"></li>
         </ul>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

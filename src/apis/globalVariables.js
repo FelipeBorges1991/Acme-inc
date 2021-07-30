@@ -18,11 +18,23 @@
     "windsurfista", "verdadeiro", "melhor", "terno"]; 
 
 
-    const randomVerbs = verbs[Math.floor(Math.random() * 50)]
-    const randomAdjectives = adjectives[Math.floor(Math.random() * 50)]
+    const Arr = [];
 
-    const productName = randomVerbs + " " + randomAdjectives
-    
+function name() {  
+  let count = 0;  
+  while (count<50){
+    count++;
+    const randomVerbs = [verbs[Math.floor(Math.random() * 50)]]
+    const randomAdj = [adjectives[ Math.floor(Math.random() * 50)]]
+    const productName = randomVerbs.concat(randomAdj).join(' ')
+    Arr.push(productName);
+  }
+  return Arr
+} 
+
+const productNames = name()
+const savedProduct = [productNames.slice(0,50)]
+
 
     
-export { productName };
+export { savedProduct };

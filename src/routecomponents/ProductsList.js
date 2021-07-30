@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import api from "../apis/index";
 import CartContext from "../contexts/cart/CartContext";
-import { verbs, adjectives } from "../apis/globalVariables";
+import { savedProduct } from "../apis/globalVariables";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
@@ -29,16 +29,22 @@ function ProductsList() {
     fetchProducts();
   }, []);
 
-  // console.log(busca);
+  console.log(savedProduct);
 
   return (
     <div className="container-fluid p-0 text-center">
       <Navbar />
-      <div className="">
-        <Carousel />
-      </div>
 
-      <h1 className="text-center mb-2 p-4 pb-2" style={{ color: "#1FB995" }}>
+      {/* Devido a dificuldades externas, não consegui implementar o efeito carrossel */}
+      {/* {products.map((img) => {
+        return (
+          <div className="container" key={img.download_url}>
+            <Carousel img={img} />
+          </div>
+        );
+      })} */}
+
+      <h1 className="text-center mb-2 p-4 pb-2">
         Produtos Acme
       </h1>
       <hr></hr>
@@ -76,8 +82,9 @@ function ProductsList() {
                 >
                   <p className="card-text text-center">
                     <strong>
-                      {verbs[Math.floor(Math.random() * 50)]}{" "}
-                      {adjectives[Math.floor(Math.random() * 50)]}
+                      {savedProduct.map((x) => {
+                        return x[Math.floor(Math.random() * 50)];
+                      })}
                     </strong>
                   </p>
 

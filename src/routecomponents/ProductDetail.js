@@ -46,17 +46,14 @@ function ProductDetail() {
             <blockquote className="card-blockquote">
               <h3>Descrição:</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
-                cumque delectus deleniti dolor esse ex fugiat, id in ipsum modi
-                molestiae mollitia, nulla numquam provident quasi soluta sunt
-                tempora vel. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Accusamus, aspernatur consequuntur cumque dolor ducimus
-                earum eos, expedita, fuga harum incidunt maxime modi mollitia
-                numquam praesentium sapiente suscipit temporibus ut vero. Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Amet nam
-                nostrum pariatur praesentium tempore. Ad architecto at aut dicta
-                enim, eveniet expedita libero magnam minus, nihil, non sequi
-                sunt voluptates!
+                Lorem ipsum et ut curabitur vehicula, diam pulvinar mi nulla,
+                mattis leo et urna. habitant cras metus laoreet habitant sapien
+                velit ligula sapien, eu lectus ultricies praesent ut torquent
+                himenaeos et nunc, eros augue accumsan ut faucibus facilisis
+                tristique. netus enim nunc neque etiam nec, quam maecenas quis
+                taciti praesent, phasellus suspendisse convallis enim. ultricies
+                auctor diam ad feugiat auctor cubilia facilisis aliquam
+                convallis, quam donec hac quisque pretium nec per erat.
               </p>
             </blockquote>
           </div>
