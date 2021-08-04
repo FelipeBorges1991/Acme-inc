@@ -1,10 +1,12 @@
+/* Configuração do APP */
 .App {
-  background-color: #193C40;
+  background-color: #193c40;
   font-family: Montserrat, sans-serif;
-  color: #F2EDE9;
+  color: #f2ede9;
   min-height: 100vh;
 }
 
+/* Implementação do Hover */
 .bloco {
   overflow: hidden;
 }
@@ -15,4 +17,25 @@
 .bloco img:hover {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
+}
+
+/* Estilização do input de busca */
+#divBusca {
+  background-color: #2f4f4f;
+  border: solid 1px;
+  border-radius: 15px;
+  width: 300px;
+  margin: auto;
+}
+
+#txtBusca {
+  float: left;
+  background-color: transparent;
+  padding-left: 5px;
+  font-style: italic;
+  font-size: 18px;
+  color: #f2ede9;
+  border: none;
+  height: 32px;
+  width: 260px;
 }

@@ -44,6 +44,7 @@ Durante esses dias ocorreram imprevistos, problemas pessoais e de saúde. Por is
 - Lógica do carrinho de compras com useContext, porém sem o botão com funão de adicionar.
 - Rota para a lista do carrinho (porén vazia)
 
-### Considerações finais
+### Dias extras!!
 
-O projeto está incompleto. Creio que se não houvesse os imprevistos, poderia entregar o que eu desejava. Continuarei aperfeçoando o mesmo para que o resultado final fique de acordo com as solicitações do teste.
+- [x] Implementada função de preço de cada produto na rota ProductList
+- [x] Implementada funcionalidade de busca por produtos(Bug.. A busca está filtrando as imagens de cada produto pelo texto. Porém não retorna o texto junto)

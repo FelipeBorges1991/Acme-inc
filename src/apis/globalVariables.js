@@ -1,40 +1,182 @@
+const verbs = [
+  "Armário",
+  "Navio",
+  "Mala",
+  "Base",
+  "Hidroavião",
+  "Revista",
+  "Carretel",
+  "Minissaia",
+  "Tamborim",
+  "Andador",
+  "Geladeira",
+  "Estátua",
+  "Rolo",
+  "Crachá",
+  "Peneira",
+  "Bafômetro",
+  "Desentupidor",
+  "Guarda-chuva",
+  "Espanador",
+  "Escudo",
+  "Raquete",
+  "Vaso sanitário",
+  "Lancheira",
+  "Cofre",
+  "Helióstato",
+  "Medalha",
+  "Foguete",
+  "Lata",
+  "Sintetizador",
+  "Grampo",
+  "Bucha",
+  "Catraca",
+  "Alfinete",
+  "Caneca",
+  "Fita",
+  "Moeda",
+  "Gel",
+  "Maquete",
+  "Interfone",
+  "Gaveta",
+  "Helicóptero",
+  "Vela de cera",
+  "Quimono",
+  "Bambolê",
+  "Necessaire",
+  "Machado",
+  "Tecido",
+  "Vareta de freio",
+  "Obra de arte",
+  "Canga",
+];
 
-     const verbs = ["Armário", "Navio", "Mala", "Base", "Hidroavião", "Revista", "Carretel", "Minissaia", "Tamborim",
-    "Andador", "Geladeira", "Estátua", "Rolo", "Crachá", "Peneira", "Bafômetro", "Desentupidor",
-    "Guarda-chuva", "Espanador", "Escudo", "Raquete", "Vaso sanitário", "Lancheira", "Cofre",
-    "Helióstato", "Medalha", "Foguete", "Lata", "Sintetizador", "Grampo", "Bucha", "Catraca",
-    "Alfinete", "Caneca", "Fita", "Moeda", "Gel", "Maquete", "Interfone", "Gaveta", "Helicóptero",
-    "Vela de cera", "Quimono", "Bambolê", "Necessaire", "Machado", "Tecido", "Vareta de freio",
-    "Obra de arte", "Canga"];
+const adjectives = [
+  "prepotente",
+  "valioso",
+  "legítimo",
+  "desleixado",
+  "Natural",
+  "inteligente",
+  "disciplinado",
+  "louvável",
+  "amargurado",
+  "honesto",
+  "odioso",
+  "vergonhoso",
+  "horroroso",
+  "magnífico",
+  "gordo",
+  "romântico",
+  "sublime",
+  "mesquinho",
+  "injusto",
+  "medroso",
+  "otário",
+  "quente",
+  "intenso",
+  "Sábio",
+  "zeloso",
+  "desapegado",
+  "faceiro",
+  "companheiro",
+  "empenhado",
+  "espantoso",
+  "traidor",
+  "perfeccionista",
+  "Qualificado",
+  "feio",
+  "tolerante",
+  "orgulhoso",
+  "ignorante",
+  "lutador",
+  "desejado",
+  "exigente",
+  "nostálgico",
+  "próspero",
+  "compreensivo",
+  "excelente",
+  "estourado",
+  "malvado",
+  "windsurfista",
+  "verdadeiro",
+  "melhor",
+  "terno",
+];
 
+const Arr = [];
 
-
-    const adjectives = ["prepotente", "valioso", "legítimo", "desleixado", "Natural", "inteligente", "disciplinado",
-    "louvável", "amargurado", "honesto", "odioso", "vergonhoso", "horroroso", "magnífico", "gordo",
-    "romântico", "sublime", "mesquinho", "injusto", "medroso", "otário", "quente", "intenso", "Sábio",
-    "zeloso", "desapegado", "faceiro", "companheiro", "empenhado", "espantoso", "traidor",
-    "perfeccionista", "Qualificado", "feio", "tolerante", "orgulhoso", "ignorante", "lutador", "desejado",
-    "exigente", "nostálgico", "próspero", "compreensivo", "excelente", "estourado", "malvado",
-    "windsurfista", "verdadeiro", "melhor", "terno"]; 
-
-
-    const Arr = [];
-
-function name() {  
-  let count = 0;  
-  while (count<50){
+function name() {
+  let count = 0;
+  while (count < 50) {
     count++;
-    const randomVerbs = [verbs[Math.floor(Math.random() * 50)]]
-    const randomAdj = [adjectives[ Math.floor(Math.random() * 50)]]
-    const productName = randomVerbs.concat(randomAdj).join(' ')
+    const randomVerbs = [verbs[Math.floor(Math.random() * 50)]];
+    const randomAdj = [adjectives[Math.floor(Math.random() * 50)]];
+    const productName = randomVerbs.concat(randomAdj).join(" ");
     Arr.push(productName);
   }
-  return Arr
-} 
+  return Arr;
+}
 
-const productNames = name()
-const savedProduct = [productNames.slice(0,50)]
+const productNames = name();
+const savedProduct = [productNames.slice(0, 50)];
+
+const namesArr = [
+  "Helicóptero honesto",
+  "Machado honesto",
+  "Medalha traidor",
+  "Helicóptero feio",
+  "Revista feio",
+  "Guarda-chuva inteligente",
+  "Medalha Natural",
+  "Gel windsurfista",
+  "Helicóptero prepotente",
+  "Helicóptero orgulhoso",
+  "Gaveta estourado",
+  "Guarda-chuva horroroso",
+  "Minissaia nostálgico",
+  "Cofre injusto",
+  "Medalha legítimo",
+  "Bafômetro traidor",
+  "Lata inteligente",
+  "Gaveta gordo",
+  "Andador injusto",
+  "Revista otário",
+  "Obra de arte exigente",
+  "Crachá compreensivo",
+  "Lata gordo",
+  "Medalha gordo",
+  "Geladeira estourado",
+  "Base odioso",
+  "Gaveta malvado",
+  "Foguete windsurfista",
+  "Minissaia honesto",
+  "Espanador feio",
+  "Navio injusto",
+  "Carretel empenhado",
+  "Raquete companheiro",
+  "Quimono louvável",
+  "Andador excelente",
+  "Helicóptero desapegado",
+  "Foguete espantoso",
+  "Canga zeloso",
+  "Base amargurado",
+  "Navio Natural",
+  "Moeda terno",
+  "Bucha Qualificado",
+  "Desentupidor louvável",
+  "Bucha intenso",
+  "Interfone terno",
+  "Bambolê medroso",
+  "Machado excelente",
+  "Tecido companheiro",
+  "Geladeira excelente",
+  "Tecido desapegado",
+];
+
+const description =
+  "Lorem ipsum et ut curabitur vehicula, diam pulvinar mi nulla, mattis leo et urna. habitant cras metus laoreet habitant sapien velit ligula sapien, eu lectus ultricies praesent ut torquent himenaeos et nunc, eros augue accumsan ut faucibus facilisis tristique. netus enim nunc neque etiam nec, quam maecenas quis taciti praesent, phasellus suspendisse convallis enim. ultricies auctor diam ad feugiat auctor cubilia facilisis aliquam convallis, quam donec hac quisque pretium nec per erat.";
 
 
-    
-export { savedProduct };
+
+export { namesArr, savedProduct, description };

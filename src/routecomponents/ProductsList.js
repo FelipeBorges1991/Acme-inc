@@ -3,14 +3,16 @@ import { Link } from "react-router-dom";
 
 import api from "../apis/index";
 import CartContext from "../contexts/cart/CartContext";
-import { savedProduct } from "../apis/globalVariables";
+import { namesArr, description } from "../apis/globalVariables";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
 
+import lupa from "../images/lupa.svg";
+
 function ProductsList() {
   const [products, setProducts] = useState([]);
-  // const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("");
 
   const { addToCart } = useContext(CartContext);
 
@@ -29,7 +31,7 @@ function ProductsList() {
     fetchProducts();
   }, []);
 
-  console.log(savedProduct);
+  console.log(search);
 
   return (
     <div className="container-fluid p-0 text-center">
@@ -44,62 +46,85 @@ function ProductsList() {
         );
       })} */}
 
-      <h1 className="text-center mb-2 p-4 pb-2">
-        Produtos Acme
-      </h1>
-      <hr></hr>
-      <input
-        type="text"
-        placeholder="Busque um produto"
-        // onChange={(event) => {
-        //   setSearch(event.target.value);
-        // }}
-      ></input>
+      <h1 className="text-center mb-2 p-4 pb-2">Produtos Acme</h1>
+
+      <div className="d-flex justify-content-center mb-4" id="divBusca">
+        <input
+          type="text"
+          id="txtBusca"
+          placeholder="Buscar..."
+          onChange={(event) => {
+            setSearch(event.target.value);
+          }}
+        />
+        <img className="m-2" src={lupa} id="btnBusca" alt="Buscar" />
+      </div>
+
       <div className="row d-flex m-0 align-items-center">
-        {products.map((list) => {
-          return (
-            <div className="col-12 col-sm-4 col-md-3 align-items">
-              <div
-                className="card m-2 border border-dark"
-                style={{ width: "18rem", backgroundColor: "#193C40" }}
-              >
-                <Link
-                  className="bloco"
-                  key={list.id}
-                  to={`/productdetail/${list.id}`}
-                >
-                  <img
-                    src={list.download_url}
-                    className="card-img-top"
-                    style={{ height: "18rem" }}
-                    alt="Game poster"
-                  />
-                </Link>
-
+        {products
+          .filter((val, i) => {
+            if (val === "") {
+              return val;
+            } else if (
+              namesArr[i].toLowerCase().includes(search.toLowerCase())
+            ) {
+              return val;
+            }
+          })
+          .map((list, i) => {
+            return (
+              <div className="col-12 col-sm-4 col-md-3 align-items">
                 <div
-                  className="card-body"
-                  style={{ backgroundColor: "#F28705" }}
+                  className="card m-2 border border-dark"
+                  style={{ width: "18rem", backgroundColor: "#193C40" }}
                 >
-                  <p className="card-text text-center">
-                    <strong>
-                      {savedProduct.map((x) => {
-                        return x[Math.floor(Math.random() * 50)];
-                      })}
-                    </strong>
-                  </p>
-
-                  <p>R&#36; Valor</p>
-                  <button
-                    className="btn btn-primary"
-                    onClick={() => addToCart("")}
+                  <Link
+                    className="bloco"
+                    key={list.id}
+                    to={`/productdetail/${list.id}`}
                   >
-                    Adicionar ao carrinho
-                  </button>
+                    <img
+                      src={list.download_url}
+                      className="card-img-top"
+                      style={{ height: "18rem" }}
+                      alt="Game poster"
+                    />
+                  </Link>
+
+                  <div
+                    className="card-body"
+                    style={{ backgroundColor: "#F28705" }}
+                    value={search}
+                  >
+                    <p className="card-text text-center">
+                      <strong>{namesArr[i]}</strong>
+                    </p>
+
+                    <p>
+                      R&#36;{" "}
+                      {Math.abs(
+                        Math.round(
+                          (10 +
+                            namesArr[i].length *
+                              ((500 - description.length) /
+                                (4 - namesArr[i].length)) +
+                            Number.EPSILON) *
+                            100
+                        ) / 100
+                      )}
+                    </p>
+
+                    <button
+                      className="btn btn-primary"
+                      onClick={() => addToCart("")}
+                    >
+                      Adicionar ao carrinho
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
       <Footer />
     </div>
