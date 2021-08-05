@@ -6,16 +6,23 @@ import CartContext from "../contexts/cart/CartContext";
 import { namesArr, description } from "../apis/globalVariables";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Carousel from "../components/Carousel";
+// import Carousel from "../components/Carousel";
 
 import lupa from "../images/lupa.svg";
+import star from "../images/star.svg";
+import starFill from "../images/starFill.svg";
 
 function ProductsList() {
+  //States iniciais
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
+  const [favorite, setFavorite] = useState(star);
+  let isFavorite = false
 
+  //Context do carrinho de compras
   const { addToCart } = useContext(CartContext);
 
+  //Conexão com a API de fotos
   useEffect(() => {
     async function fetchProducts() {
       try {
@@ -29,7 +36,16 @@ function ProductsList() {
       }
     }
     fetchProducts();
-  }, []);
+  }, [favorite]);
+
+  function handleChange() {
+    isFavorite ^= true;
+    if (isFavorite) {
+      setFavorite(starFill);
+    } else {
+      setFavorite(star);
+    }
+  }
 
   console.log(search);
 
@@ -61,6 +77,7 @@ function ProductsList() {
       </div>
 
       <div className="row d-flex m-0 align-items-center">
+        {/* Implementação do filtro por nomes */}
         {products
           .filter((val, i) => {
             if (val === "") {
@@ -99,7 +116,7 @@ function ProductsList() {
                     <p className="card-text text-center">
                       <strong>{namesArr[i]}</strong>
                     </p>
-
+                    {/* Fórmula para preço dos produtos */}
                     <p>
                       R&#36;{" "}
                       {Math.abs(
@@ -113,13 +130,20 @@ function ProductsList() {
                         ) / 100
                       )}
                     </p>
-
-                    <button
-                      className="btn btn-primary"
-                      onClick={() => addToCart("")}
-                    >
-                      Adicionar ao carrinho
-                    </button>
+                    <div className="d-flex justify-content-center ">
+                      {/* Botão para adicionar produtos ao carrinho */}
+                      <button
+                        className="btn btn-primary border"
+                        style={{ backgroundColor: "#193c40" }}
+                        onClick={() => addToCart("")}
+                      >
+                        Adicionar ao carrinho
+                      </button>
+                      {/* Botão de favoritos */}
+                      <button className="btn" onClick={handleChange}>
+                        <img src={favorite} alt="Star"></img>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

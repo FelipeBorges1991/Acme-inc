@@ -50,3 +50,6 @@ Durante esses dias ocorreram imprevistos, problemas pessoais e de saúde. Por is
 
 - [x] Implementada função de preço de cada produto na rota ProductList
 - [x] Implementada funcionalidade de busca por produtos(Bug.. A busca está filtrando as imagens de cada produto pelo texto. Porém não retorna o texto junto)
+- [] Finalizar rota do carrinho
+- [x] Acrescentar botão de favoritos (Bug... Está selecionando todos os elementos, e o botão só volta pro state inicial depois de dois clicks)
+- [x] Implementar fórmula de preço para cada produto.
