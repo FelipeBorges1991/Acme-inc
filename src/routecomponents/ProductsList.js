@@ -17,7 +17,7 @@ function ProductsList() {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
   const [favorite, setFavorite] = useState(star);
-  let isFavorite = false
+  let isFavorite = false;
 
   //Context do carrinho de compras
   const { addToCart } = useContext(CartContext);
@@ -135,7 +135,22 @@ function ProductsList() {
                       <button
                         className="btn btn-primary border"
                         style={{ backgroundColor: "#193c40" }}
-                        onClick={() => addToCart("")}
+                        onClick={() =>
+                          addToCart(
+                            namesArr[i] +
+                              " " +
+                              Math.abs(
+                                Math.round(
+                                  (10 +
+                                    namesArr[i].length *
+                                      ((500 - description.length) /
+                                        (4 - namesArr[i].length)) +
+                                    Number.EPSILON) *
+                                    100
+                                ) / 100
+                              )
+                          )
+                        }
                       >
                         Adicionar ao carrinho
                       </button>
